@@ -13,6 +13,21 @@ Config.Target = 'auto'
 -- It is triggered with false when opening and true when closing
 Config.HudEvent = nil
 
+-- Catalog preview: where the vehicle is shown and where the camera stands
+-- coords  vehicle position and heading
+-- camera  camera offset relative to the vehicle (x = left/right, y = forward/back, z = height)
+-- fov     starting camera zoom (lower = closer)
+Config.Preview = {
+    coords = vector4(-173.3594, -1170.2433, 22.9438, 72.2143),
+    camera = vector3(-3.5, 4.5, 1.0),
+    fov = 50.0
+}
+-- Dealer NPC
+Config.Ped = {
+    model = "csb_car3guy1",
+    coords = vector4(-196.8720, -1168.7892, 23.8812, 278.8438)
+}
+
 -- Where the vehicle spawns after a purchase
 Config.BuySpawn = vector4(-221.8155, -1176.7878, 23.0145, 91.8175)
 
@@ -52,11 +67,6 @@ Config.Standalone = {
 -- Config.OnVehicleBought = function(vehicle, plate) end
 Config.OnVehicleBought = nil
 
--- Dealer NPC
-Config.Ped = {
-    model = "csb_car3guy1",
-    coords = vector4(-196.8720, -1168.7892, 23.8812, 278.8438)
-}
 
 -- Vehicle list
 -- model    spawn name (must exist on your server)
@@ -105,4 +115,3 @@ Config.Vehicles = {
         speedVal = 350
     },
 }
-
