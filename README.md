@@ -1,3 +1,8 @@
+
+
+![Dealer Preview](https://github.com/user-attachments/assets/b8a144fc-a746-40c6-85e5-1ee9a93b51fd)
+
+
 # 🚗 Modern Car Dealership for FiveM
 
 A clean, modern vehicle dealership with a fully custom NUI. Players browse cars by brand, preview them in 3D, pick a color, test drive and buy - all from one screen.
@@ -110,12 +115,11 @@ Config.Standalone = {
     end
 }
 ```
+![Dealer Preview 2](https://github.com/user-attachments/assets/d24d24de-a1c3-4d70-81f0-3b31fbcbd03a)
+
+![Dealer Preview 3](https://github.com/user-attachments/assets/241e1b09-67d1-4797-83ec-1f473ccf286f)
 
 ## ⚠️ Notes
 
 - Vehicle models and images in the default config are examples - replace them with your own.
 - On QBCore/Qbox the chosen color is stored in `mods` as `customPrimaryColor` / `customSecondaryColor`. The vehicle is colored correctly at purchase, but your garage script may not restore it.
-
-## 📄 License
-
-Add your license here (e.g. MIT).
