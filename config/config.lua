@@ -106,20 +106,3 @@ Config.Vehicles = {
     },
 }
 
--- Test vehicles, remove once you add your own
-for _, brand in ipairs({ "Lamborghini", "BMW", "Volkswagen" }) do
-    for i = 2, 12 do
-        Config.Vehicles[#Config.Vehicles + 1] = {
-            model = "sultan",
-            name = "Sultan " .. i,
-            brand = brand,
-            price = 500000 + i * 25000,
-            img = "sultan.png",
-            engine = 60 + i * 3,
-            brakes = 50 + i * 2,
-            speed = 55 + i * 3,
-            accel = 50 + i * 3,
-            speedVal = 220 + i * 10
-        }
-    end
-end
