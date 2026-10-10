@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Car</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Krona+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" style="display: none;">
+        <div id="stage">
+            <div class="hd" id="hl"><div class="stripes"><i></i><i></i><i></i><i></i></div><div class="box"></div><div class="txt">SELECT CAR</div></div>
+            <div class="hd" id="hr"><div class="box"></div><div class="stripes"><i></i><i></i><i></i><i></i></div><div class="txt" id="serie-name">SERIE NAME</div></div>
+
+            <div id="content">
+            <div class="arr" id="al"><svg viewBox="0 0 40 56"><path d="M29 8 L10 28 L29 48" fill="none" stroke="#e9eef0" stroke-width="9"/></svg></div>
+            <div class="arr" id="ar"><svg viewBox="0 0 40 56"><path d="M11 8 L30 28 L11 48" fill="none" stroke="#fff" stroke-width="9"/></svg></div>
+            <div id="brands"></div>
+
+            <div id="pager"><div id="pp"><span>&larr;</span></div><div id="pl"><span></span></div><div id="pn"><span>&rarr;</span></div></div>
+            <div id="cards"></div>
+            </div>
+
+            <div id="detail">
+                <div class="dt-colors" id="dt-colors"></div>
+                <div class="dt-name" id="dt-name">Car Name</div>
+                <div class="dt-panel">
+                    <div class="dt-desc" id="dt-desc"></div>
+                    <div class="dt-stats">
+                        <div class="dt-row"><span>Engine</span><b id="dt-engine"></b><div class="dt-bar"><u id="bar-engine"></u></div></div>
+                        <div class="dt-row"><span>Brakes</span><b id="dt-brakes"></b><div class="dt-bar"><u id="bar-brakes"></u></div></div>
+                        <div class="dt-row"><span>Speed</span><b id="dt-speed"></b><div class="dt-bar"><u id="bar-speed"></u></div></div>
+                        <div class="dt-row"><span>Acceleration</span><b id="dt-accel"></b><div class="dt-bar"><u id="bar-accel"></u></div></div>
+                        <div class="dt-row dt-rowprice"><span>Price</span><b id="dt-price"></b></div>
+                    </div>
+                </div>
+                <div class="dt-confirm" id="dt-confirm">
+                    <div class="dt-paytitle">CONFIRM PURCHASE</div>
+                    <div class="dt-confirmtext" id="dt-confirmtext"></div>
+                    <div class="dt-payrow">
+                        <div class="dt-paybtn dt-yes" id="dt-yes"><i>Enter</i><span>Yes</span></div>
+                        <div class="dt-paybtn dt-no" id="dt-no"><i>Esc</i><span>No</span></div>
+                    </div>
+                </div>
+                <div class="dt-pay" id="dt-pay">
+                    <div class="dt-paytitle">PAYMENT METHOD</div>
+                    <div class="dt-payrow">
+                        <div class="dt-paybtn" data-pay="cash"><i>1</i><span>Cash</span></div>
+                        <div class="dt-paybtn" data-pay="bank"><i>2</i><span>Bank</span></div>
+                    </div>
+                    <div class="dt-payprice" id="dt-payprice"></div>
+                </div>
+                <div class="dt-keys">
+                    <div class="dt-key" data-act="buy"><i>Enter</i><span>Select</span></div>
+                    <div class="dt-key" data-act="back"><i>Delete</i><span>Back</span></div>
+                    <div class="dt-key" data-act="color"><i>Ctrl</i><span>Color Mode</span></div>
+                    <div class="dt-key" data-act="test"><i>Tab</i><span>Test Drive</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

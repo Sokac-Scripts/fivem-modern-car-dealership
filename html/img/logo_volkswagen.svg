@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="46" fill="none" stroke="#fff" stroke-width="4.5"/>
+  <!-- V (gore) -->
+  <path d="M26 16 L50 62 L74 16" fill="none" stroke="#fff" stroke-width="9" stroke-linejoin="miter"/>
+  <!-- W (dolje) -->
+  <path d="M17 33 L36 82 L50 50 L64 82 L83 33" fill="none" stroke="#fff" stroke-width="9" stroke-linejoin="miter"/>
+</svg>
