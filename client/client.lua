@@ -2,10 +2,10 @@ local display = false
 local previewVehicle = nil
 local previewCamera = nil
 
-local currentZoom = 50.0
+local currentZoom = Config.Preview.fov
 local rotateDir = nil
 
-local spawnCoords = vector4(-173.3594, -1170.2433, 22.9438, 72.2143)
+local spawnCoords = Config.Preview.coords
 
 local function cleanupPreview()
     if previewVehicle and DoesEntityExist(previewVehicle) then
@@ -78,11 +78,11 @@ RegisterNUICallback("previewVehicle", function(data, cb)
         previewCamera = CreateCam("DEFAULT_SCRIPTED_CAMERA", true)
         SetCamActive(previewCamera, true)
         RenderScriptCams(true, true, 1000, true, true)
-        currentZoom = 50.0
+        currentZoom = Config.Preview.fov
         SetCamFov(previewCamera, currentZoom)
     end
 
-    local camPos = GetOffsetFromEntityInWorldCoords(previewVehicle, -3.5, 4.5, 1.0)
+    local camPos = GetOffsetFromEntityInWorldCoords(previewVehicle, Config.Preview.camera.x, Config.Preview.camera.y, Config.Preview.camera.z)
     SetCamCoord(previewCamera, camPos.x, camPos.y, camPos.z)
     PointCamAtEntity(previewCamera, previewVehicle, 0.0, 0.0, 0.0, true)
 
@@ -106,7 +106,6 @@ RegisterNUICallback("controlVehicle", function(data, cb)
     if data.action == "rotate" then
         rotateDir = data.dir
     elseif data.action == "drag" then
-
         if previewVehicle and DoesEntityExist(previewVehicle) then
             SetEntityHeading(previewVehicle, GetEntityHeading(previewVehicle) - (data.dx or 0) * 0.4)
         end
@@ -330,6 +329,7 @@ CreateThread(function()
         SetDisplay(true)
     end)
 end)
+
 local displayVehicles = {}
 local rotatingVehicles = {}
 
